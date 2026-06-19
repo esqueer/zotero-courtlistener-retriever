@@ -1,0 +1,15 @@
+{
+  "manifest_version": 2,
+  "name": "CourtListener Case Fetcher",
+  "version": "1.0.0",
+  "description": "Auto-populates Zotero Case metadata from CourtListener when you add a case PDF, and OCRs scanned PDFs locally first.",
+  "author": "esqueer",
+  "applications": {
+    "zotero": {
+      "id": "courtlistener-case-fetcher@esqueer",
+      "update_url": "https://raw.githubusercontent.com/esqueer/zotero-courtlistener/main/updates.json",
+      "strict_min_version": "7.0",
+      "strict_max_version": "9.0.*"
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "addons": {
+    "courtlistener-case-fetcher@esqueer": {
+      "updates": [
+        {
+          "version": "1.0.0",
+          "update_link": "https://github.com/esqueer/zotero-courtlistener/releases/download/v1.0.0/courtlistener.xpi",
+          "applications": {
+            "zotero": {
+              "strict_min_version": "7.0",
+              "strict_max_version": "9.0.*"
+            }
+          }
+        }
+      ]
+    }
+  }
+}

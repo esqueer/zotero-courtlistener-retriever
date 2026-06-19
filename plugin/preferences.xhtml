@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vbox xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+      xmlns:html="http://www.w3.org/1999/xhtml">
+
+  <groupbox>
+    <html:h2>CourtListener</html:h2>
+
+    <hbox align="center">
+      <label value="API token:" control="cl-apiToken" />
+      <html:input id="cl-apiToken" type="text" style="flex:1; min-width:24em;"
+                  preference="extensions.courtlistener.apiToken" />
+    </hbox>
+    <description class="cl-hint">
+      Free token from courtlistener.com → Profile → API. Without one you get a
+      lower, anonymous rate limit.
+    </description>
+
+    <checkbox id="cl-autoProcess" label="Automatically look up cases when a PDF is added"
+              preference="extensions.courtlistener.autoProcess" />
+  </groupbox>
+
+  <groupbox>
+    <html:h2>OCR (local)</html:h2>
+
+    <checkbox id="cl-ocrEnabled" label="OCR scanned PDFs that have no text layer"
+              preference="extensions.courtlistener.ocrEnabled" />
+
+    <hbox align="center">
+      <label value="OCR engine:" control="cl-ocrEngine" />
+      <menulist id="cl-ocrEngine" preference="extensions.courtlistener.ocrEngine">
+        <menupopup>
+          <menuitem label="ocrmypdf (recommended)" value="ocrmypdf" />
+          <menuitem label="tesseract" value="tesseract" />
+        </menupopup>
+      </menulist>
+    </hbox>
+
+    <hbox align="center">
+      <label value="Executable path:" control="cl-ocrPath" />
+      <html:input id="cl-ocrPath" type="text" style="flex:1; min-width:28em;"
+                  preference="extensions.courtlistener.ocrPath" />
+    </hbox>
+    <description class="cl-hint">
+      Absolute path to the OCR program, e.g.
+      C:\Python310\Scripts\ocrmypdf.exe (Windows) or /opt/homebrew/bin/ocrmypdf (macOS).
+    </description>
+
+    <hbox align="center">
+      <label value="OCR language:" control="cl-ocrLanguage" />
+      <html:input id="cl-ocrLanguage" type="text" style="width:8em;"
+                  preference="extensions.courtlistener.ocrLanguage" />
+    </hbox>
+  </groupbox>
+</vbox>
