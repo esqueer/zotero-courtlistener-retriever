@@ -41,7 +41,7 @@ CourtListener**):
 
 ### Install (end users)
 
-1. Download `courtlistener.xpi` from the [Releases](../../releases) page.
+1. Download `courtlistener.xpi` from the dist folder.
 2. In Zotero: **Tools → Plugins → gear icon → Install Plugin From File…** and
    select the `.xpi`.
 3. Open **Settings → CourtListener** and paste a free CourtListener API token
